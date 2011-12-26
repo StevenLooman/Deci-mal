@@ -17,34 +17,35 @@ When doing add, sub, mult, div-operators with two Decimals, the result will have
 
 JsDecimal uses an integer for internal storage.
 
-Example usage:
-```javascript
-var decimal = require('decimal');
+Example usage
+=============
+```js
+    var decimal = require('decimal');
 
-// conversion from numbers
-var a = decimal.fromNumber(2, 20); // 20.00
-var b = decimal.fromNumber(4, 40.1); // 40.1000
+    // conversion from numbers
+    var a = decimal.fromNumber(2, 20); // 20.00
+    var b = decimal.fromNumber(4, 40.1); // 40.1000
 
-// conversion from strings
-var c = Decimal.fromString(2, '60.60001'); // 60.00
+    // conversion from strings
+    var c = Decimal.fromString(2, '60.60001'); // 60.00
 
-// specification of precision
-var d = new Decimal(1); // 0.0
+    // specification of precision
+    var d = new Decimal(1); // 0.0
 
-// changing of precision
-b.newPrecision(2).toString(); // 40.10
+    // changing of precision
+    b.newPrecision(2).toString(); // 40.10
 
-// addition
-a.add(b).toString(); // 60.1000
+    // addition
+    a.add(b).toString(); // 60.1000
 
-// subtraction
-a.sub(b).toString(); // -20.1000
+    // subtraction
+    a.sub(b).toString(); // -20.1000
 
-// multiplication
-a.mul(b).toString(); // 802.0000
+    // multiplication
+    a.mul(b).toString(); // 802.0000
 
-// division
-a.div(b).toString(); // 0.4988
+    // division
+    a.div(b).toString(); // 0.4988
 ```
 
 Unit testing
