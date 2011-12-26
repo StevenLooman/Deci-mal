@@ -1,0 +1,20 @@
+{
+    "name": "JsDecimal"
+  , "description": "Decimal type for JavaScript"
+  , "version": "0.1"
+  , "author": "Steven Looman <steven.looman@ram-solutions.nl>"
+  , "keywords": ["type", "decimal"]
+  , "dependencies": {
+    }
+  , "devDependencies": {
+        "expresso": "0.9.2"
+    }
+  , "directories": { "lib": "./lib/ose" }
+  , "scripts": { "test": "make test" }
+  , "main": "./index.js"
+  , "engines": { "node": ">= 0.6.0" }
+  , "repository": {
+        "type": "git"
+      , "url": "git://github.com/StevenLooman/JsDecimal.git"
+    }
+}
