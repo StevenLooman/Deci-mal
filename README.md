@@ -6,19 +6,12 @@ Simple Decimal type for Javascript.
 Simple Decimal type which allows for:
 
 * conversion from numbers;
-
 * conversion from strings;
-
 * specification of precision;
-
 * changing of precision;
-
 * addition of Decimals;
-
 * subtraction of Decimals;
-
 * multiplication of Decimals;
-
 * division of Decimals.
 
 When doing add, sub, mult, div-operators with two Decimals, the result will have the precision of the source Decimal with the highest precision.
