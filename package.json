@@ -1,8 +1,8 @@
 {
     "name": "Deci-mal"
   , "description": "Decimal type for JavaScript"
-  , "version": "0.1"
-  , "author": "Steven Looman <steven.looman@gmail.com>",
+  , "version": "0.1.0"
+  , "author": "Steven Looman <steven.looman@gmail.com>"
   , "keywords": ["type", "decimal"]
   , "dependencies": {
     }
