@@ -17,5 +17,5 @@ module.exports = {
 
         assert.equal(f.precision, 4);
         assert.equal(f.value, 4988); // 4988 instead of 4987 due to rounding
-    },
+    }
 };

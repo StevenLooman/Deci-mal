@@ -36,5 +36,5 @@ module.exports = {
         var e = decimal.fromNumber(4, 10);
 
         assert.equal(d.leq(e), false);
-    },
+    }
 };
