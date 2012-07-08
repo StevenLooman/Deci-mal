@@ -1,7 +1,7 @@
 {
     "name": "Deci-mal",
     "description": "Decimal type for JavaScript",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "author": "Steven Looman <steven.looman@gmail.com>",
     "keywords": [ "type", "decimal", "arithmetic", "float", "single", "double", "number", "precision" ],
     "licenses" : [
