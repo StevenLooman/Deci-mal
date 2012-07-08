@@ -17,8 +17,8 @@ describe('Decimal', function() {
             var e = decimal.fromNumber(20, 4);
             var f = d.add(e);
 
-            assert.equal(f.precision, 4); // highest precision is taken
-            assert.equal(f.value, 300000);
+            assert.equal(f.precision, 2); // lowest precision is taken
+            assert.equal(f.value, 3000);
         });
     });
 
@@ -37,8 +37,8 @@ describe('Decimal', function() {
             var e = decimal.fromNumber(20, 4);
             var f = d.sub(e);
 
-            assert.equal(f.precision, 4);
-            assert.equal(f.value, -100000);
+            assert.equal(f.precision, 2);
+            assert.equal(f.value, -1000);
         });
     });
 
@@ -57,8 +57,8 @@ describe('Decimal', function() {
             var e = decimal.fromNumber(20, 4);
             var f = d.mult(e);
 
-            assert.equal(f.precision, 4);
-            assert.equal(f.value, 2000000);
+            assert.equal(f.precision, 2);
+            assert.equal(f.value, 20000);
         });
     });
 
@@ -77,8 +77,8 @@ describe('Decimal', function() {
             var e = decimal.fromNumber(40.1, 4);
             var f = d.div(e);
 
-            assert.equal(f.precision, 4);
-            assert.equal(f.value, 4988); // 4988 instead of 4987 due to rounding
+            assert.equal(f.precision, 2);
+            assert.equal(f.value, 50); // rounding errors
         });
     });
 
