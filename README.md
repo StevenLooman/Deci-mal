@@ -1,5 +1,5 @@
-Decimal
-=======
+Deci-mal
+========
 
 Simple Decimal type for Javascript.
 
@@ -16,9 +16,9 @@ Simple Decimal type which allows for:
 
 When doing add, sub, mult, div-operators with two Decimals, the result will have the precision of the source Decimal with the highest precision.
 
-JsDecimal uses an integer for internal storage.
+Deci-mal uses an integer for internal storage.
 
-JsDecimal is released under the Simplified BSD License.
+Deci-mal is released under the Simplified BSD License.
 
 Example usage
 =============
@@ -53,4 +53,4 @@ a.div(b).toString(); // 0.4988
 
 Unit testing
 ============
-Unit tests are built using Expresso.
+Unit tests are built using Mocha.
