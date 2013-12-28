@@ -15,7 +15,7 @@
     },
     "devDependencies": {
         "mocha": "1.2.2",
-	"mocha-lcov-reporter": "0.0.1"
+        "mocha-lcov-reporter": "0.0.1"
     },
     "directories": {
         "lib": "./lib",
