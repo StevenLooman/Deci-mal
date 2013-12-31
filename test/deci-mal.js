@@ -82,6 +82,73 @@ describe('Decimal', function() {
         });
     });
 
+    describe('#cmp()', function() {
+        it('should return -1 if a is lesser than b', function() {
+            var a = decimal.fromNumber(1, 2);
+            var b = decimal.fromNumber(2, 2);
+
+            assert.equal(a.cmp(b), -1);
+        });
+
+        it('should return 0 if a and b are exactly equal', function() {
+            var a = decimal.fromNumber(1, 2);
+            var b = decimal.fromNumber(1, 2);
+
+            assert.equal(a.cmp(b), 0);
+        });
+
+        it('should return 1 if a is greater than b', function() {
+            var a = decimal.fromNumber(3, 2);
+            var b = decimal.fromNumber(2, 2);
+
+            assert.equal(a.cmp(b), 1);
+        });
+
+
+        it('should return -1 if c is lesser than d, different precision', function() {
+            var c = decimal.fromNumber(1, 4);
+            var d = decimal.fromNumber(2, 2);
+
+            assert.equal(c.cmp(d), -1);
+        });
+
+        it('should return 0 if c and d are exactly equal, different precision', function() {
+            var c = decimal.fromNumber(1, 4);
+            var d = decimal.fromNumber(1, 2);
+
+            assert.equal(c.cmp(d), 0);
+        });
+
+        it('should return 1 if c is greater than d, different precision', function() {
+            var c = decimal.fromNumber(3, 4);
+            var d = decimal.fromNumber(2, 2);
+
+            assert.equal(c.cmp(d), 1);
+        });
+
+
+        it('should return -1 if e is lesser than f, different precision', function() {
+            var e = decimal.fromNumber(1, 2);
+            var f = decimal.fromNumber(2, 4);
+
+            assert.equal(e.cmp(f), -1);
+        });
+
+        it('should return 0 if e and f are exactly equal, different precision', function() {
+            var e = decimal.fromNumber(1, 2);
+            var f = decimal.fromNumber(1, 4);
+
+            assert.equal(e.cmp(f), 0);
+        });
+
+        it('should return 1 if e is greater than f, different precision', function() {
+            var e = decimal.fromNumber(3, 2);
+            var f = decimal.fromNumber(2, 4);
+
+            assert.equal(e.cmp(f), 1);
+        });
+    });
+
     describe('#eq()', function() {
         it('should return true if two numbers are exactly equal', function() {
             var d = decimal.fromNumber(10, 2);
