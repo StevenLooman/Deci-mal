@@ -17,8 +17,8 @@ describe('Decimal', function() {
             var e = decimal.fromNumber(20, 4);
             var f = d.add(e);
 
-            assert.equal(f.precision, 2); // lowest precision is taken
-            assert.equal(f.value, 3000);
+            assert.equal(f.precision, 4); // highest precision is taken
+            assert.equal(f.value, 300000);
         });
     });
 
@@ -37,8 +37,8 @@ describe('Decimal', function() {
             var e = decimal.fromNumber(20, 4);
             var f = d.sub(e);
 
-            assert.equal(f.precision, 2);
-            assert.equal(f.value, -1000);
+            assert.equal(f.precision, 4);
+            assert.equal(f.value, -100000);
         });
     });
 
@@ -57,8 +57,8 @@ describe('Decimal', function() {
             var e = decimal.fromNumber(20, 4);
             var f = d.mult(e);
 
-            assert.equal(f.precision, 2);
-            assert.equal(f.value, 20000);
+            assert.equal(f.precision, 4);
+            assert.equal(f.value, 2000000);
         });
     });
 
@@ -72,13 +72,22 @@ describe('Decimal', function() {
             assert.equal(f.value, 50);
         });
 
+        it('should be able to correctly divide two numbers with a different precision', function() {
+            var d = decimal.fromNumber(10, 2);
+            var e = decimal.fromNumber(20, 4);
+            var f = d.div(e);
+
+            assert.equal(f.precision, 4);
+            assert.equal(f.value, 5000);
+        });
+
         it('should be able to correctly divide two numbers with different precision', function() {
             var d = decimal.fromNumber(20, 2);
             var e = decimal.fromNumber(40.1, 4);
             var f = d.div(e);
 
-            assert.equal(f.precision, 2);
-            assert.equal(f.value, 50); // rounding errors
+            assert.equal(f.precision, 4);
+            assert.equal(f.value, 4988);
         });
     });
 
@@ -380,6 +389,16 @@ describe('Decimal', function() {
 
             assert.equal(d.precision, 2);
             assert.equal(d.value, -1000);
+        });
+    });
+
+    describe('tests for bugs', function() {
+        it('should correctly handle 0 precision numbers', function() {
+            var a = decimal.fromNumber(0.0001, 8);
+            var b = decimal.fromNumber(100, 0);
+            var c = a.mult(b);
+
+            assert.equal(c.toString(), '0.01000000');
         });
     });
 });
