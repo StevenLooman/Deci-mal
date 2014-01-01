@@ -1,5 +1,7 @@
-var decimal = require('..');
 var assert = require('assert');
+
+var decimal = process.env.JS_COV ? require('../lib-cov') : require('../lib');
+
 
 describe('Decimal', function() {
     describe('#add()', function() {

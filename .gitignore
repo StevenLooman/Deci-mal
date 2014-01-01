@@ -1,3 +1,5 @@
 *.swp
 .sonar/
 coverage/
+coverage_unit.html
+lib-cov/
