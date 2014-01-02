@@ -23,14 +23,15 @@ Deci-mal is released under the Simplified BSD License.
 Example usage
 =============
 ```js
-var decimal = require('decimal');
+var decimal = require('./');
+var Decimal = decimal.decimal;
 
 // conversion from numbers
-var a = decimal.fromNumber(2, 20); // 20.00
-var b = decimal.fromNumber(4, 40.1); // 40.1000
+var a = decimal.fromNumber(20, 2); // 20.00
+var b = decimal.fromNumber(40.1, 4); // 40.1000
 
 // conversion from strings
-var c = Decimal.fromString(2, '60.60001'); // 60.00
+var c = decimal.fromString('60.60001', 2); // 60.60
 
 // specification of precision
 var d = new Decimal(1); // 0.0
@@ -45,7 +46,7 @@ a.add(b).toString(); // 60.1000
 a.sub(b).toString(); // -20.1000
 
 // multiplication
-a.mul(b).toString(); // 802.0000
+a.mult(b).toString(); // 802.0000
 
 // division
 a.div(b).toString(); // 0.4988
