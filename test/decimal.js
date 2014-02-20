@@ -362,6 +362,18 @@ describe('Decimal', function() {
 
             assert.equal(d.toString(), '0.05');
         });
+
+        it('should be able to give a string representation of a small negative value', function() {
+            var d = decimal.fromNumber(-0.5, 2);
+
+            assert.equal(d.toString(), '-0.50');
+        });
+
+        it('should be able to give a string representation of a smaller negative value', function() {
+            var d = decimal.fromNumber(-0.05, 2);
+
+            assert.equal(d.toString(), '-0.05');
+        });
     });
 
     describe('#fromString()', function() {
